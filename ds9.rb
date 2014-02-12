@@ -10,7 +10,7 @@ class Ds9 < Formula
     #sha1 '3bb2f7d15c8b6f366e7f19c5408acd47800ac18c'
   elsif MacOS.version == :mavericks
     url 'http://ds9.si.edu/download/darwinmavericks/ds9.darwinmavericks.7.3b5.tar.gz'
-    sha1 '6cfbabc546e343b0e75e9e428296ec9749b74dbe'
+    sha1 '9443a0317e49eff9d79b7f7493e4429cda591f1e'
   else
     onoe 'This formula is only for Mountain Lion and above'
   end
