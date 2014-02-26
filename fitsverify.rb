@@ -10,6 +10,6 @@ class Fitsverify < Formula
   def install
     system 'gcc -o fitsverify ftverify.c fvrf_data.c fvrf_file.c fvrf_head.c fvrf_key.c fvrf_misc.c -DSTANDALONE -lcfitsio -lm'
     bin.install 'fitsverify'
-    prefix.install README
+    prefix.install 'README'
   end
 end
