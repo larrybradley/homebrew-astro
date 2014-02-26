@@ -14,6 +14,7 @@ class Cosmic < Formula
   def install
     system 'make all'
     bin.install 'cosmic'
+    prefix.install 'README', 'LICENSE'
   end
 end
 
