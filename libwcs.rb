@@ -8,7 +8,9 @@ class Libwcs < Formula
   depends_on 'cfitsio'
 
   def install
-    system 'make all'
-    bin.install Dir['bin/*']
+    cd 'libwcs'
+    system 'make'
+    lib.install 'libwcs.a'
+    include.install Dir['*.h']
   end
 end
