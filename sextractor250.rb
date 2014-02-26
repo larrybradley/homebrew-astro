@@ -21,6 +21,6 @@ class Sextractor250 < Formula
     mv prefix+'man', prefix+'share'
 
     rm_rf Dir['config/.svn']
-    mv prefix+'config', prefix+'share'+'sextractor250'
+    mv 'config', prefix+'share'+'sextractor250'
   end
 end
