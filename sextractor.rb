@@ -28,6 +28,6 @@ class Sextractor < Formula
     system './configure', *args
     system 'make'
     system 'make install'
-    mv Dir['config/*'], '#{share}/sextractor'
+    mv Dir['config/*'], share+'sextractor'
   end
 end
