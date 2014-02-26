@@ -6,10 +6,10 @@ class Lenstool < Formula
   sha1 '9f4a97f7099c8bb70d8a64da2da70c3770b88320'
   version '3.8.4'
 
-  depends_on 'wcstools'
+  depends_on 'libwcs'
   depends_on 'cfitsio'
   depends_on 'gsl'
-  depends on 'pgplot'
+  depends_on 'pgplot'
 
 
   def install
@@ -20,5 +20,12 @@ class Lenstool < Formula
     system './configure', *args
     system 'make'
     system 'make install'
+
+    mkdir share
+    mkdir share+'lenstool'
+    mv 'examples', share+'lenstool'
+    mv 'examples_table', share+'lenstool'
+
+    doc.install Dir['doc/*']
   end
 end
