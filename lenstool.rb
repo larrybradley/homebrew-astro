@@ -25,6 +25,7 @@ class Lenstool < Formula
     mkdir share+'lenstool'
     mv 'examples', share+'lenstool'
     mv 'examples_table', share+'lenstool'
+    mv 'perl', share+'lenstool'
 
     doc.install Dir['doc/*']
   end
