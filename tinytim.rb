@@ -24,8 +24,8 @@ class Tinytim < Formula
     mv Dir.glob('*.tab'), prefix+'share'
     mv Dir.glob('*.fil'), prefix+'share'
     mv Dir.glob('*.dat'), prefix+'share'
-    mv Dir.glob('*.fits)', prefix+'share'
-    mv Dir.glob('*.new)', prefix+'share'
+    mv Dir.glob('*.fits'), prefix+'share'
+    mv Dir.glob('*.new'), prefix+'share'
     mv 'cflow.graph', prefix+'share'
     mv 'spectra.lis', prefix+'share'
     #share.install Dir[config']
