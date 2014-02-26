@@ -47,7 +47,7 @@ index 98c4de9..d46ea8e 100644
 -		  "Error: Environment variable TINYTIM undefined\n");
 -		exit(2);
 -	}
-+	temp = "/usr/local/share/tinytim"
++	temp = "/usr/local/share/tinytim";
  	strcpy( filename, temp );
  	strcat( filename, "/" );
  	strcat( filename, string );
