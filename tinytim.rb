@@ -20,15 +20,15 @@ class Tinytim < Formula
     end
     bin.install 'tiny1', 'tiny2', 'tiny3', 'makemaps'
     doc.install %w[READ.ME README.1ST RELEASE.TXT TinyTim_WFC3.doc tinytim.pdf tinytim.doc]
-    mkdir prefix+'share'+'tinytim'
-    mv Dir.glob('*.pup'), prefix+'share'+'tinytim'
-    mv Dir.glob('*.tab'), prefix+'share'+'tinytim'
-    mv Dir.glob('*.fil'), prefix+'share'+'tinytim'
-    mv Dir.glob('*.dat'), prefix+'share'+'tinytim'
-    mv Dir.glob('*.fits'), prefix+'share'+'tinytim'
-    mv Dir.glob('*.new'), prefix+'share'+'tinytim'
-    mv 'cflow.graph', prefix+'share'+'tinytim'
-    mv 'spectra.lis', prefix+'share'+'tinytim'
+    mkdir share+'tinytim'
+    mv Dir.glob('*.pup'), share+'tinytim'
+    mv Dir.glob('*.tab'), share+'tinytim'
+    mv Dir.glob('*.fil'), share+'tinytim'
+    mv Dir.glob('*.dat'), share+'tinytim'
+    mv Dir.glob('*.fits'), share+'tinytim'
+    mv Dir.glob('*.new'), share+'tinytim'
+    mv 'cflow.graph', share+'tinytim'
+    mv 'spectra.lis', share+'tinytim'
   end
 end
 
