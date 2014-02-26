@@ -32,25 +32,22 @@ class Tinytim < Formula
   end
 end
 
-
 __END__
 diff --git a/system.c b/system.c
-index 98c4de9..49a545b 100644
+index 98c4de9..d46ea8e 100644
 --- a/system.c
 +++ b/system.c
-@@ -34,14 +34,8 @@ void Default_dir( char *string, char *filename )
+@@ -34,12 +34,7 @@ void Default_dir( char *string, char *filename )
  {
-
-        char    *temp;
--       if ( (temp = getenv("TINYTIM")) == NULL )
--       {
--               fprintf(stderr,
--                 "Error: Environment variable TINYTIM undefined\n");
--               exit(2);
--       }
-+    temp = "/usr/local/share/tinytim/";
-        strcpy( filename, temp );
--       strcat( filename, "/" );
-        strcat( filename, string );
-
- } /* Default_dir */
+ 
+ 	char    *temp;
+-	if ( (temp = getenv("TINYTIM")) == NULL )
+-	{
+-		fprintf(stderr, 
+-		  "Error: Environment variable TINYTIM undefined\n");
+-		exit(2);
+-	}
++	temp = "/usr/local/share/tinytim"
+ 	strcpy( filename, temp );
+ 	strcat( filename, "/" );
+ 	strcat( filename, string );
