@@ -1,6 +1,6 @@
 require 'formula'
 
-class Sextractor286 < Formula
+class Sextractor < Formula
   homepage 'https://www.astromatic.net/software/sextractor'
   url 'https://www.astromatic.net/download/sextractor/sextractor-2.8.6.tar.gz'
   sha1 '103ac2d51d9bae9fcbc5dda3031d82cd127f8250'
@@ -28,13 +28,6 @@ class Sextractor286 < Formula
     system './configure', *args
     system 'make'
     system 'make install'
-
-    #mv bin+'sex', bin+'sex250'
-    #mv prefix+'man/man1/sex.1', prefix+'man/man1/sex250.1'
-    #mv prefix+'man/manx/sex.x', prefix+'man/manx/sex250.x'
-    #mkdir prefix+'share'
-    #mv prefix+'man', prefix+'share'
-
-    prefix.install Dir['config']
+    mv Dir['config/*'], '#{share}/sextractor'
   end
 end
