@@ -19,7 +19,7 @@ class Tinytim < Formula
       system 'make macosx'
     end
     bin.install 'tiny1', 'tiny2', 'tiny3', 'makemaps'
-    doc.install %w[READ.ME README.1ST README.TXT TinyTim_WFC3.doc tinytim.pdf tinytim.doc]
+    doc.install %w[READ.ME README.1ST RELEASE.TXT TinyTim_WFC3.doc tinytim.pdf tinytim.doc]
     mkdir prefix+'share'
     mv '*.pup', prefix+'share'
     mv '*.tab', prefix+'share'
