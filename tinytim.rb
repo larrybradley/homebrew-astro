@@ -5,7 +5,7 @@ class Tinytim < Formula
   url 'http://tinytim.stsci.edu/static/tinytim-7.5.tar.gz'
   sha1 '98ead7af02a616b5da5ef5b93fb4b38710bf815b'
 
-  option 'with-threaded', 'Compile for multi-threaded execution'
+  option 'without-threaded', 'Do not build a multi-threaded version'
 
   def patches
     # remove dependency on TINYTIM environment variable
@@ -13,10 +13,10 @@ class Tinytim < Formula
   end
 
   def install
-    if build.with? 'threaded'
-      system 'make threadedmacosx'
-    else
+    if build.without? 'threaded'
       system 'make macosx'
+    else
+      system 'make threadedmacosx'
     end
     bin.install 'tiny1', 'tiny2', 'tiny3', 'makemaps'
     doc.install %w[READ.ME README.1ST RELEASE.TXT TinyTim_WFC3.doc tinytim.pdf tinytim.doc]
@@ -29,7 +29,6 @@ class Tinytim < Formula
     mv Dir.glob('*.new'), prefix+'share'+'tinytim'
     mv 'cflow.graph', prefix+'share'+'tinytim'
     mv 'spectra.lis', prefix+'share'+'tinytim'
-    #share.install Dir[config']
   end
 end
 
