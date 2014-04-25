@@ -2,9 +2,9 @@ require 'formula'
 
 class Lenstool < Formula
   homepage 'http://projets.lam.fr/projects/lenstool/wiki'
-  url 'http://projets.lam.fr/attachments/download/348'
+  url 'http://projets.lam.fr/attachments/download/348/lenstool_v6.7.1.tar.gz'
   sha1 '9f4a97f7099c8bb70d8a64da2da70c3770b88320'
-  version '3.8.4'
+  #version '6.7.1'
 
   depends_on 'libwcs'
   depends_on 'cfitsio'
