@@ -5,6 +5,7 @@ class Sextractor < Formula
   url 'https://www.astromatic.net/download/sextractor/sextractor-2.8.6.tar.gz'
   sha1 '103ac2d51d9bae9fcbc5dda3031d82cd127f8250'
 
+  depends_on 'fftw'
   depends_on 'autoconf' => :build
   depends_on 'automake' => :build
   depends_on 'libtool' => :build
