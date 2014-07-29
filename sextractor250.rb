@@ -14,19 +14,10 @@ class Sextractor250 < Formula
     system "make"
     system "make install"
 
-    #mv bin+"sex", bin+"sex250"
-    #mv prefix+"man/man1/sex.1", prefix+"man/man1/sex250.1"
-    #mv prefix+"man/manx/sex.x", prefix+"man/manx/sex250.x"
-    #mkdir prefix+"share"
-    #mv prefix+"man", prefix+"share"
-    #(bin+"sex250").install bin+"sex"
-    #(man1+"sex250.1").install prefix+"man/man1/sex.1"
     File.rename(bin+"sex", bin+"sex250")
     mv prefix+"man/man1/sex.1", prefix+"man/man1/sex250.1"
+    rm prefix+"man/manx/sex.x"
     man1.install prefix+"man/man1/sex250.1"
-
-    #rm_rf Dir["config/.svn"]
-    #mv "config", share+"sextractor250"
     rm_rf Dir["config/.svn"]
     (share+'sextractor250').install Dir["config/*"]
   end
