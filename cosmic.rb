@@ -1,10 +1,10 @@
-require 'formula'
+require "formula"
 
 class Cosmic < Formula
-  homepage 'http://www.kempner.net/code.php#cosmic'
-  url 'http://www.kempner.net/code/cosmic.tar.gz'
-  sha1 '5d9feeed3dcf662e1236fef063e097bf01723fca'
-  version '2.0.8'
+  homepage "http://www.kempner.net/code.php#cosmic"
+  url "http://www.kempner.net/code/cosmic.tar.gz"
+  sha1 "5d9feeed3dcf662e1236fef063e097bf01723fca"
+  version "2.0.8"
 
   def patches
     # change default cosmology to (H, O_m, O_l) = (0.7, 0.3, 0.7)
@@ -12,9 +12,9 @@ class Cosmic < Formula
   end
 
   def install
-    system 'make all'
-    bin.install 'cosmic'
-    prefix.install 'README', 'LICENSE'
+    system "make all"
+    bin.install "cosmic"
+    prefix.install "README", "LICENSE"
   end
 end
 
