@@ -2,19 +2,10 @@ require "formula"
 
 class Sextractor < Formula
   homepage "https://www.astromatic.net/software/sextractor"
-  url "https://www.astromatic.net/download/sextractor/sextractor-2.8.6.tar.gz"
-  sha1 "103ac2d51d9bae9fcbc5dda3031d82cd127f8250"
+  url "https://www.astromatic.net/download/sextractor/sextractor-2.19.5.tar.gz"
+  sha1 "43a48391b90b915b1c256b68c29c2276bee8621d"
 
   depends_on "fftw"
-  depends_on "autoconf" => :build
-  depends_on "automake" => :build
-  depends_on "libtool" => :build
-
-  def patches
-    # use Mac OSX Accelerate framework instead of ATLAS
-    "https://gist.github.com/larrybradley/9ab242c100b5227168c9/raw/630f75504fe6fb09fd98cc9acd8119293445c504/sextractor286.patch"
-  end
-
 
   def install
     args = %W[
@@ -22,10 +13,9 @@ class Sextractor < Formula
       --with-fftw=#{HOMEBREW_PREFIX}/lib
       --with-fftw-incdir=#{HOMEBREW_PREFIX}/include
       --enable-dependency-tracking
+      --disable-model-fitting
     ]
 
-    system "autoreconf -fi"
-    system "glibtoolize -fi"
     system "./configure", *args
     system "make"
     system "make install"
