@@ -19,6 +19,6 @@ class Sextractor250 < Formula
     rm prefix+"man/manx/sex.x"
     man1.install prefix+"man/man1/sex250.1"
     rm_rf Dir["config/.svn"]
-    (share+'sextractor250').install Dir["config/*"]
+    (share+"sextractor250").install Dir["config/*"]
   end
 end

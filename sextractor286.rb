@@ -34,6 +34,6 @@ class Sextractor286 < Formula
     File.rename(man1+"sex.1", man1+"sex286.1")
     rm man+"manx/sex.x"
     File.rename(share+"sextractor", share+"sextractor286")
-    (share+'sextractor286').install Dir["config/*"]
+    (share+"sextractor286").install Dir["config/*"]
   end
 end
