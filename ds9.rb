@@ -5,21 +5,22 @@ class Ds9 < Formula
 
   if MacOS.version == :mountain_lion
     stable do
-      url "http://ds9.si.edu/download/darwinmountainlion/ds9.darwinmountainlion.7.2.tar.gz"
-      sha1 "4d7d17fd619ef5aa2fc14618811207faad797d76"
-      version "7.2"
+      url "http://ds9.si.edu/download/darwinmountainlion/ds9.darwinmountainlion.7.3.2.tar.gz"
+      sha1 "53900b53b09f999bb8ec724d6fdebf2bdfa5f388"
     end
 
     # install with `--devel` flag
-    devel do
-      url "http://ds9.si.edu/download/darwinmountainlion/ds9.darwinmountainlion.7.3b5.tar.gz"
-      sha1 "3bb2f7d15c8b6f366e7f19c5408acd47800ac18c"
-      version "7.3b5"
-    end
+    #devel do
+    #  url "http://ds9.si.edu/download/darwinmountainlion/ds9.darwinmountainlion.7.3b5.tar.gz"
+    #  sha1 "3bb2f7d15c8b6f366e7f19c5408acd47800ac18c"
+    #  version "7.3b5"
+    #end
   elsif MacOS.version == :mavericks
-    url "http://ds9.si.edu/download/darwinmavericks/ds9.darwinmavericks.7.3b5.tar.gz"
-    sha1 "9443a0317e49eff9d79b7f7493e4429cda591f1e"
-    version "7.3b5"
+    url "http://ds9.si.edu/download/darwinmavericks/ds9.darwinmavericks.7.3.2.tar.gz"
+    sha1 "7b5436ed743b0482a8fc355f534159f777333c41"
+  elsif MacOS.version == :yosemite
+    url "http://ds9.si.edu/download/darwinmavericks/ds9.darwinmavericks.7.3.2.tar.gz"
+    sha1 "7b5436ed743b0482a8fc355f534159f777333c41"
   else
     onoe "This formula is only for Mountain Lion and above"
   end
