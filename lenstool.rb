@@ -10,6 +10,10 @@ class Lenstool < Formula
   depends_on "gsl"
   depends_on "pgplot" => :optional
 
+  fails_with :clang do
+    cause "OSX clang compiler does not support openmp"
+  end
+
   def install
     args = %W[
       --prefix=#{prefix}
