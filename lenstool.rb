@@ -23,7 +23,6 @@ class Lenstool < Formula
       --with-wcslib-include-path=#{HOMEBREW_PREFIX}/include
       --with-gsl-lib-path=#{HOMEBREW_PREFIX}/lib
       --with-gsl-include-path=#{HOMEBREW_PREFIX}/include
-      --disable-openmp
     ]
 
     system "./configure", *args
