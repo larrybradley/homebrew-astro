@@ -24,7 +24,7 @@ class Sextractor286 < Formula
     ]
 
     system "autoreconf -fi"
-    system "glibtoolize -fi"
+    #system "glibtoolize -fi"
     system "./configure", *args
     system "make"
     system "make install"
