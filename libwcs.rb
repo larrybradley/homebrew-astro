@@ -2,8 +2,8 @@ require "formula"
 
 class Libwcs < Formula
   homepage "http://tdc-www.harvard.edu/wcstools/"
-  url "http://tdc-www.harvard.edu/software/wcstools/wcstools-3.9.0.tar.gz"
-  sha1 "61cf419d1bb132f52dfa9d2e6cfe8b5258cef7a1"
+  url "http://tdc-www.harvard.edu/software/wcstools/wcstools-3.9.2.tar.gz"
+  sha1 "3d86e2480443717d42bb8129be9bcc339ef5ff4e"
 
   depends_on "cfitsio"
 
