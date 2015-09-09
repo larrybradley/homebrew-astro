@@ -7,12 +7,13 @@ class Sextractor286 < Formula
 
   depends_on "fftw"
   depends_on "autoconf" => :build
-  depends_on "automake" => :build
-  depends_on "libtool" => :build
 
-  def patches
-    # use Mac OSX Accelerate framework instead of ATLAS
-    "https://gist.github.com/larrybradley/9ab242c100b5227168c9/raw/630f75504fe6fb09fd98cc9acd8119293445c504/sextractor286.patch"
+  option "with-check", "Enable build-time checking (running check will take ~20 minutes)"
+
+  # use Mac OSX Accelerate framework instead of ATLAS
+  patch do
+    url "https://gist.githubusercontent.com/larrybradley/9ab242c100b5227168c9/raw/49784fbc0707b40f532a6486c1a1efd84a1e4499/sextractor286.patch"
+    sha1 "4b58c667c2285edb3ee89875f4b11de3b8bbfdc2"
   end
 
   def install
@@ -23,10 +24,9 @@ class Sextractor286 < Formula
       --enable-dependency-tracking
     ]
 
-    system "autoreconf -fi"
-    #system "glibtoolize -fi"
+    system "autoconf"
     system "./configure", *args
-    system "make"
+    system "make", "check" if build.with? "check"
     system "make install"
 
     File.rename(bin+"sex", bin+"sex286")
