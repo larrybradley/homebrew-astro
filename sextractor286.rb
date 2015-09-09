@@ -8,7 +8,7 @@ class Sextractor286 < Formula
   depends_on "fftw"
   depends_on "autoconf" => :build
 
-  option "with-check", "Enable build-time checking (running check will take ~20 minutes)"
+  option "with-check", "Enable build-time checking (with take ~20 minutes)"
 
   # use Mac OSX Accelerate framework instead of ATLAS
   patch do
