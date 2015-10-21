@@ -2,7 +2,7 @@ require "formula"
 
 class Wfc3uvcte < Formula
   homepage "http://www.stsci.edu/hst/wfc3/tools/cte_tools"
-  url "https://stsci.box.com/shared/static/jj9m69qm2kz59k6j87pt88u6vdxyt2jg.gz"
+  url "http://www.stsci.edu/~lbradley/homebrew/wfc3uvcte-1.0.tar.gz"
   sha1 "0e9d965254defc03bc27f6e946a03548f817a0f6"
   version "1.0"
 
