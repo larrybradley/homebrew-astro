@@ -4,7 +4,7 @@ class Fitsverify < Formula
   desc "Rigorously checks whether a FITS (Flexible Image Transport System) data file conforms to the FITS standard"
   homepage "http://heasarc.gsfc.nasa.gov/docs/software/ftools/fitsverify/"
   url "http://heasarc.gsfc.nasa.gov/docs/software/ftools/fitsverify/fitsverify-4.18.tar.gz"
-  sha256 "bdb097241aa0c10203bbcce74c9da13beb85ea6cb61b56095ba7c28c38660c81"
+  sha256 "e6fd00c2aa3749ab991167c7129ad27c79d9ee841ec8df1c11b307e875b8faba"
 
   depends_on "cfitsio" => :build
 
