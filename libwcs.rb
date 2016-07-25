@@ -1,10 +1,10 @@
 require "formula"
 
 class Libwcs < Formula
+  desc "A library for using World Coordinate Systems (WCS) in astronomical images"
   homepage "http://tdc-www.harvard.edu/wcstools/"
-  url "http://tdc-www.harvard.edu/software/wcstools/wcstools-3.9.2.tar.gz"
-  sha1 "3d86e2480443717d42bb8129be9bcc339ef5ff4e"
-
+  url "http://tdc-www.harvard.edu/software/wcstools/wcstools-3.9.3.tar.gz"
+  sha256 "1005ae353e37c498490163f4785705fdb8bb3633dccb6291bf3b24b2135ab949"
   depends_on "cfitsio"
 
   def install
