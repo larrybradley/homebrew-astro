@@ -1,9 +1,10 @@
 require "formula"
 
 class Wfc3uvcte < Formula
+  desc "HST/WFC3 CTE tools"
   homepage "http://www.stsci.edu/hst/wfc3/tools/cte_tools"
   url "http://www.stsci.edu/~lbradley/homebrew/wfc3uvcte-1.0.tar.gz"
-  sha1 "0e9d965254defc03bc27f6e946a03548f817a0f6"
+  sha256 "8c4d22627a98b56e5cccb5a9ec805d4958d728f7cfa45c8d9c552e1095ab727b"
   version "1.0"
 
   depends_on :fortran

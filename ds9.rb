@@ -1,7 +1,7 @@
 require "formula"
 
 class Ds9 < Formula
-  desc "Astronomical imaging and data visualization application"
+  desc "Astronomical imaging and data visualization"
   homepage "http://ds9.si.edu/"
 
   if MacOS.version == :el_capitan

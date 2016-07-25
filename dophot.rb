@@ -1,6 +1,7 @@
 require "formula"
 
 class Dophot < Formula
+  desc "PSF-fitting photometry"
   homepage "https://github.com/M1TDoPHOT/DoPHOT_C"
   url "http://www.stsci.edu/~lbradley/homebrew/dophot-4.2.tar.gz"
   sha256 "4f332ed0aa3b5f8dd48785db4a2e949d7925a3c400e1cab03b78fa4c40042031"

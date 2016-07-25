@@ -1,9 +1,10 @@
 require "formula"
 
 class Tinytim < Formula
+  desc "PSF modeling tool for HST"
   homepage "http://tinytim.stsci.edu/"
   url "http://tinytim.stsci.edu/static/tinytim-7.5.tar.gz"
-  sha1 "98ead7af02a616b5da5ef5b93fb4b38710bf815b"
+  sha256 "f832d864693236cacfadda32380617495a887230781b7dc8d4d663e997e9474b"
 
   option "without-threaded", "Do not build a multi-threaded version"
 

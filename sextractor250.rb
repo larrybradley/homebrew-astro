@@ -1,9 +1,10 @@
 require "formula"
 
 class Sextractor250 < Formula
+  desc "Source Extraction from astronomical images"
   homepage "https://www.astromatic.net/software/sextractor"
   url "https://www.astromatic.net/download/sextractor/sextractor-2.5.0.tar.gz"
-  sha1 "84e111ea0796428d9336de7add3820575fd7d4cb"
+  sha256 "786f987818546d9b72fea7e786f040b63e31fbc46325deb58929251065573303"
 
   def install
     args = %W[

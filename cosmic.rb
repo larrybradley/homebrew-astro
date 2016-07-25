@@ -1,9 +1,10 @@
 require "formula"
 
 class Cosmic < Formula
+  desc "Calculate cosmological distances and timescales"
   homepage "http://www.kempner.net/code.php#cosmic"
   url "http://www.kempner.net/code/cosmic.tar.gz"
-  sha1 "5d9feeed3dcf662e1236fef063e097bf01723fca"
+  sha256 "141e7b5c13cd5b10a2d108f358401f3834b46a45de797db45e5e8f9310885031"
   version "2.0.8"
 
   def patches

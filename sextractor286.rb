@@ -1,9 +1,10 @@
 require "formula"
 
 class Sextractor286 < Formula
+  desc "Source Extraction from astronomical images"
   homepage "https://www.astromatic.net/software/sextractor"
   url "https://www.astromatic.net/download/sextractor/sextractor-2.8.6.tar.gz"
-  sha1 "103ac2d51d9bae9fcbc5dda3031d82cd127f8250"
+  sha256 "dde34594c2a1324f0951272e404e55d0d4cb0607f8ea18a61f2563bb67f494ac"
 
   depends_on "fftw"
   depends_on "autoconf" => :build
@@ -13,7 +14,7 @@ class Sextractor286 < Formula
   # use Mac OSX Accelerate framework instead of ATLAS
   patch do
     url "https://gist.githubusercontent.com/larrybradley/9ab242c100b5227168c9/raw/49784fbc0707b40f532a6486c1a1efd84a1e4499/sextractor286.patch"
-    sha1 "4b58c667c2285edb3ee89875f4b11de3b8bbfdc2"
+    sha256 "251fc282d1b0ff361906466c024b849bb2b8d6e408aec085e1e1082f27974129"
   end
 
   def install
