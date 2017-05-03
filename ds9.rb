@@ -6,29 +6,15 @@ class Ds9 < Formula
 
   if MacOS.version == :el_capitan
     stable do
-      url "http://ds9.si.edu/download/darwinelcapitan/ds9.darwinelcapitan.7.4.tar.gz"
-      sha256 "a10d9edc5ade0ac548e814b22234bfd758c70df5bdcb9d189a4cf7daee204fcd"
-      version "7.4"
+      url "http://ds9.si.edu/download/darwinelcapitan/ds9.darwinelcapitan.7.5.tar.gz"
+      sha256 "52506e849bd9967a9e43c449357e72d7371fee2eeef65b5f7868c9c8cbb96081"
+      version "7.5"
     end
-
-    # install with `--devel` flag
-    devel do
-      url "http://ds9.si.edu/download/darwinelcapitan/ds9.darwinelcapitan.7.5b4.tar.gz"
-      sha256 "92d0dc1e6293aeab3f0d87945cbaffa86b796c7f5e514c5dc24a4dc6b976a85f"
-      version "7.5b4"
-    end
-  elsif MacOS.version == :yosemite
+  elsif MacOS.version == :sierra
     stable do
-      url "http://ds9.si.edu/download/darwinyosemite/ds9.darwinyosemite.7.4.tar.gz"
-      sha256 "7b64cec160b45922fc77a602b10a7f3ffff633794d9431bc4cd0788000065fc2"
-      version "7.4"
-    end
-
-    # install with `--devel` flag
-    devel do
-      url "http://ds9.si.edu/download/darwinyosemite/ds9.darwinyosemite.7.5b4.tar.gz"
-      sha256 "4130b455fa2640aea2b377c33255969f79e84eb59f51317843a7607dbb1e0b27"
-      version "7.5b4"
+      url "http://ds9.si.edu/download/darwinsierra/ds9.darwinsierra.7.5.tar.gz"
+      sha256 "2509b495370af3b4edfe567e7f21d426910cea7f23b9a229894e83008ea2ddbc"
+      version "7.5"
     end
   else
     onoe "This formula is only for Yosemite and above"
