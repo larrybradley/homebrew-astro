@@ -3,8 +3,8 @@ require "formula"
 class Lenstool < Formula
   desc "A gravitational lensing software for modeling mass distribution of galaxies and clusters (strong and weak regime)"
   homepage "http://projets.lam.fr/projects/lenstool/wiki"
-  url "https://projets.lam.fr/attachments/download/2948/lenstool-6.8.1.tar.gz"
-  sha256 "6ea572ab2073ad9fadbe79332a7c2525ca54e5e76446b76568614a55c18b17bf"
+  url "https://projets.lam.fr/attachments/download/4243/lenstool-7.0.tar.gz"
+  sha256 "5f2b5c7e1d6e39f1f60c2a24ebfe19216d13c692cf0cad5ef73ff4b99ee728f5"
 
   depends_on "libwcs"
   depends_on "cfitsio"
@@ -26,7 +26,8 @@ class Lenstool < Formula
       --with-gsl-include-path=#{HOMEBREW_PREFIX}/include
     ]
 
-    system "./configure", *args
+    # homebrew gcc-7 compiler fails; use system gcc as a workaround
+    system "./configure", *args, "CC=/usr/bin/gcc"
     system "make"
     system "make install"
 
