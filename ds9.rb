@@ -4,7 +4,13 @@ class Ds9 < Formula
   desc "Astronomical imaging and data visualization"
   homepage "http://ds9.si.edu/"
 
-  if MacOS.version == :sierra
+  if MacOS.version == :el_capitan
+    stable do
+      url "http://ds9.si.edu/download/darwinsierra/ds9.darwinelcapitan.7.6.tar.gz"
+      sha256 "27207e7ffe6e1e8910b43846f472ce5f0735409a865352a8bf61c1dea6ca2102"
+      version "7.6"
+    end
+  elsif MacOS.version == :sierra
     stable do
       url "http://ds9.si.edu/download/darwinsierra/ds9.darwinsierra.7.6.tar.gz"
       sha256 "e0b67fee1b61ae8e73e09dc0479a266371b8aebeb9b536b33a6aa9c2c2a6ce7d"
@@ -17,7 +23,7 @@ class Ds9 < Formula
       version "7.6"
     end
   else
-    onoe "ds9 - This formula is for Sierra and High Sierra only."
+    onoe "ds9 - This formula is for El Capitan, Sierra, or High Sierra only."
   end
 
   def install
