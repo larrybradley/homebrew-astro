@@ -7,7 +7,7 @@ class Wfc3uvcte < Formula
   sha256 "8c4d22627a98b56e5cccb5a9ec805d4958d728f7cfa45c8d9c552e1095ab727b"
   version "1.0"
 
-  depends_on :fortran
+  depends_on "gcc"
 
   def install
     system "gfortran wfc3uv_ctereverse.F -o wfc3uv_ctereverse.e"
