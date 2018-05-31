@@ -6,7 +6,7 @@ class Ds9 < Formula
 
   if MacOS.version == :el_capitan
     stable do
-      url "http://ds9.si.edu/download/darwinsierra/ds9.darwinelcapitan.7.6.tar.gz"
+      url "http://ds9.si.edu/download/darwinelcapitan/ds9.darwinelcapitan.7.6.tar.gz"
       sha256 "27207e7ffe6e1e8910b43846f472ce5f0735409a865352a8bf61c1dea6ca2102"
       version "7.6"
     end
