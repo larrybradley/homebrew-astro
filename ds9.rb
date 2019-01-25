@@ -4,26 +4,26 @@ class Ds9 < Formula
   desc "Astronomical imaging and data visualization"
   homepage "http://ds9.si.edu/"
 
-  if MacOS.version == :el_capitan
+  if MacOS.version == :sierra
     stable do
-      url "http://ds9.si.edu/download/darwinelcapitan/ds9.darwinelcapitan.7.6.tar.gz"
-      sha256 "27207e7ffe6e1e8910b43846f472ce5f0735409a865352a8bf61c1dea6ca2102"
-      version "7.6"
-    end
-  elsif MacOS.version == :sierra
-    stable do
-      url "http://ds9.si.edu/download/darwinsierra/ds9.darwinsierra.7.6.tar.gz"
-      sha256 "e0b67fee1b61ae8e73e09dc0479a266371b8aebeb9b536b33a6aa9c2c2a6ce7d"
-      version "7.6"
+      url "http://ds9.si.edu/download/darwinsierra/ds9.darwinsierra.8.0.1.tar.gz"
+      sha256 "8353a1e3f54014e46ab822825f25c978c61f1cfd66e3fbe1591ef794ba82d2c0"
+      version "8.0.1"
     end
   elsif MacOS.version == :high_sierra
     stable do
-      url "http://ds9.si.edu/download/darwinhighsierra/ds9.darwinhighsierra.7.6.tar.gz"
-      sha256 "9a3fbfc1718a434cf5b677e1c34839bff7f9d2b2ee398b9a9a42e5c54ef84255"
-      version "7.6"
+      url "http://ds9.si.edu/download/darwinhighsierra/ds9.darwinhighsierra.8.0.1.tar.gz"
+      sha256 "c43c68e8ae3147f611a5ff2c6f6464e0046fcd3e652aa07faf047c8095286dc4"
+      version "8.0.1"
+    end
+  elsif MacOS.version == :mojave
+    stable do
+      url "http://ds9.si.edu/download/darwinmojave/ds9.darwinmojave.8.0.1.tar.gz"
+      sha256 "b9fd02afa975dd5376530086e3b19c7b475d331ddb6af9ba44a064db09e296b4"
+      version "8.0.1"
     end
   else
-    onoe "ds9 - This formula is for El Capitan, Sierra, or High Sierra only."
+    onoe "ds9 - This formula is for OSX 10.12 (Sierra) or higher."
   end
 
   def install
