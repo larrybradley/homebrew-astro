@@ -1,6 +1,6 @@
 require "formula"
 
-class Sextractor < Formula
+class Sextractor219 < Formula
   desc "Source Extraction from astronomical images"
   homepage "http://www.astromatic.net/software/sextractor"
   url "http://www.astromatic.net/download/sextractor/sextractor-2.19.5.tar.gz"
@@ -37,6 +37,12 @@ class Sextractor < Formula
     system "make"
     system "make", "check" if build.with? "check"
     system "make", "install"
-    (share+"sextractor").install Dir["config/*"]
+
+    File.rename(bin+"sex", bin+"sex219")
+    mv prefix+"man/man1/sex.1", prefix+"man/man1/sex219.1"
+    rm prefix+"man/manx/sex.x"
+    man1.install prefix+"man/man1/sex219.1"
+    rm_rf Dir["config/.svn"]
+    (share+"sextractor219").install Dir["config/*"]
   end
 end
