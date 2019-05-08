@@ -13,7 +13,7 @@ class Sextractor250 < Formula
 
     system "./configure", *args
     system "make"
-    system "make install"
+    system "make", "install"
 
     File.rename(bin+"sex", bin+"sex250")
     mv prefix+"man/man1/sex.1", prefix+"man/man1/sex250.1"

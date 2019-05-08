@@ -28,7 +28,7 @@ class Sextractor286 < Formula
     system "autoconf"
     system "./configure", *args
     system "make", "check" if build.with? "check"
-    system "make install"
+    system "make", "install"
 
     File.rename(bin+"sex", bin+"sex286")
     File.rename(bin+"ldactoasc", bin+"ldactoasc286")
