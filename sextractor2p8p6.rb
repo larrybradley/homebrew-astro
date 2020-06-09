@@ -1,9 +1,9 @@
 require "formula"
 
-class Sextractor286 < Formula
+class Sextractor2p8p6 < Formula
   desc "Source Extraction from astronomical images"
-  homepage "https://www.astromatic.net/software/sextractor"
-  url "https://www.astromatic.net/download/sextractor/sextractor-2.8.6.tar.gz"
+  homepage "http://www.astromatic.net/software/sextractor"
+  url "http://www.astromatic.net/download/sextractor/sextractor-2.8.6.tar.gz"
   sha256 "dde34594c2a1324f0951272e404e55d0d4cb0607f8ea18a61f2563bb67f494ac"
 
   depends_on "fftw"
@@ -30,11 +30,11 @@ class Sextractor286 < Formula
     system "make", "check" if build.with? "check"
     system "make", "install"
 
-    File.rename(bin+"sex", bin+"sex286")
-    File.rename(bin+"ldactoasc", bin+"ldactoasc286")
-    File.rename(man1+"sex.1", man1+"sex286.1")
+    File.rename(bin+"sex", bin+"sex-2.8.6")
+    File.rename(bin+"ldactoasc", bin+"ldactoasc-2.8.6")
+    File.rename(man1+"sex.1", man1+"sex-2.8.6.1")
     rm man+"manx/sex.x"
-    File.rename(share+"sextractor", share+"sextractor286")
-    (share+"sextractor286").install Dir["config/*"]
+    File.rename(share+"sextractor", share+"sextractor-2.8.6")
+    (share+"sextractor-2.8.6").install Dir["config/*"]
   end
 end
