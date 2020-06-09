@@ -2,16 +2,14 @@ require "formula"
 
 class Tinytim < Formula
   desc "PSF modeling tool for HST"
-  homepage "http://tinytim.stsci.edu/"
-  url "http://tinytim.stsci.edu/static/tinytim-7.5.tar.gz"
-  sha256 "f832d864693236cacfadda32380617495a887230781b7dc8d4d663e997e9474b"
+  homepage "https://www.stsci.edu/hst/instrumentation/focus-and-pointing/focus/tiny-tim-hst-psf-modeling"
+  url "https://github.com/spacetelescope/tinytim/archive/7.5.tar.gz"
+  sha256 "398c41850545f8fbd37a50b60a76d9835f2a996d9e3191aafb48cea899abf8bd"
 
   option "without-threaded", "Do not build a multi-threaded version"
 
-  def patches
-    # remove dependency on TINYTIM environment variable
-    DATA
-  end
+  # remove dependency on TINYTIM environment variable
+  patch :DATA
 
   def install
     if build.without? "threaded"
@@ -35,16 +33,16 @@ end
 
 __END__
 diff --git a/system.c b/system.c
-index 98c4de9..d46ea8e 100644
+index 98c4de9..0d471e8 100644
 --- a/system.c
 +++ b/system.c
 @@ -34,12 +34,7 @@ void Default_dir( char *string, char *filename )
  {
- 
+
  	char    *temp;
 -	if ( (temp = getenv("TINYTIM")) == NULL )
 -	{
--		fprintf(stderr, 
+-		fprintf(stderr,
 -		  "Error: Environment variable TINYTIM undefined\n");
 -		exit(2);
 -	}

@@ -2,15 +2,13 @@ require "formula"
 
 class Cosmic < Formula
   desc "Calculate cosmological distances and timescales"
-  homepage "http://www.kempner.net/code.php#cosmic"
-  url "http://www.kempner.net/code/cosmic.tar.gz"
+  homepage "https://www.kempner.net/code.php#cosmic"
+  url "https://www.kempner.net/code/cosmic.tar.gz"
   sha256 "141e7b5c13cd5b10a2d108f358401f3834b46a45de797db45e5e8f9310885031"
   version "2.0.8"
 
-  def patches
-    # change default cosmology to (H, O_m, O_l) = (0.7, 0.3, 0.7)
-    DATA
-  end
+  # change default cosmology to (H, O_m, O_l) = (0.7, 0.3, 0.7)
+  patch :DATA
 
   def install
     system "make all"

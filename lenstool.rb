@@ -2,9 +2,12 @@ require "formula"
 
 class Lenstool < Formula
   desc "A gravitational lensing software for modeling mass distribution of galaxies and clusters (strong and weak regime)"
-  homepage "http://projets.lam.fr/projects/lenstool/wiki"
-  url "https://projets.lam.fr/attachments/download/4243/lenstool-7.0.tar.gz"
-  sha256 "5f2b5c7e1d6e39f1f60c2a24ebfe19216d13c692cf0cad5ef73ff4b99ee728f5"
+  homepage "https://projets.lam.fr/projects/lenstool/wiki"
+  url "https://projets.lam.fr/attachments/download/5851/lenstool-7.1.1.tar.gz"
+  sha256 "272aed5e5964b8b941c916be98f13a7f134f3a785681c5b6199ab0438114f5ac"
+
+  # url "https://projets.lam.fr/attachments/download/4243/lenstool-7.0.tar.gz"
+  # sha256 "5f2b5c7e1d6e39f1f60c2a24ebfe19216d13c692cf0cad5ef73ff4b99ee728f5"
 
   depends_on "libwcs"
   depends_on "cfitsio"
