@@ -38,11 +38,11 @@ index 98c4de9..0d471e8 100644
 +++ b/system.c
 @@ -34,12 +34,7 @@ void Default_dir( char *string, char *filename )
  {
-
+ 
  	char    *temp;
 -	if ( (temp = getenv("TINYTIM")) == NULL )
 -	{
--		fprintf(stderr,
+-		fprintf(stderr, 
 -		  "Error: Environment variable TINYTIM undefined\n");
 -		exit(2);
 -	}
