@@ -21,8 +21,8 @@ class Ds9 < Formula
 
   elsif MacOS.version == :high_sierra
     stable do
-      url "https://ds9.si.edu/download/darwinhighsierra/ds9.darwinhighsierra.8.0.1.tar.gz"
-      sha256 "c43c68e8ae3147f611a5ff2c6f6464e0046fcd3e652aa07faf047c8095286dc4"
+      url "http://ds9.si.edu/download/darwinhighsierra/ds9.darwinhighsierra.8.1.tar.gz"
+      sha256 "a9da274428560d988bc13e4c187ed9b035e5358aa0f6ae03b3ad33c185af0b27"
       version "8.1"
     end
 
