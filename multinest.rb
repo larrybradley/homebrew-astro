@@ -40,16 +40,17 @@ end
 
 __END__
 diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
-index 91d892c..a597006 100644
+index 91d892c..f07edca 100644
 --- a/src/CMakeLists.txt
 +++ b/src/CMakeLists.txt
-@@ -35,6 +35,9 @@ foreach(lang C CXX Fortran)
+@@ -35,6 +35,10 @@ foreach(lang C CXX Fortran)
      if(CMAKE_${lang}_COMPILER_ID STREQUAL GNU)
          MESSAGE(STATUS "Detected gfortran, adding -ffree-line-length-none compiler flag.")
          set(CMAKE_Fortran_FLAGS "${CMAKE_Fortran_FLAGS} -ffree-line-length-none")
 +        if(CMAKE_${lang}_COMPILER_VERSION VERSION_GREATER 10)
 +            MESSAGE(STATUS "Detected gfortran >= 10, adding -std=legacy compiler flag.")
 +            set(CMAKE_Fortran_FLAGS "${CMAKE_Fortran_FLAGS} -std=legacy")
++        endif()
          break()
      endif()
  endforeach()
