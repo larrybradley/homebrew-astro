@@ -2,7 +2,7 @@ require "formula"
 
 class Sextractor2p5p0 < Formula
   desc "Source Extraction from astronomical images"
-  homepage "https://www.astromatic.net/software/sextractor"
+  homepage "http://www.astromatic.net/software/sextractor"
   url "http://www.astromatic.net/download/sextractor/sextractor-2.5.0.tar.gz"
   sha256 "786f987818546d9b72fea7e786f040b63e31fbc46325deb58929251065573303"
 
