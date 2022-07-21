@@ -3,9 +3,8 @@ require "formula"
 class Cuba < Formula
   desc "Library for multidimensional numerical integration"
   homepage "http://www.feynarts.de/cuba/"
-  url "http://www.feynarts.de/cuba/Cuba-4.2.1.tar.gz"
-  version "4.2"
-  sha256 "3789c458193440e73a603f6649acbe8f1903d61203905e1b63c00ef0db8580a8"
+  url "http://www.feynarts.de/cuba/Cuba-4.2.2.tar.gz"
+  sha256 "8d9f532fd2b9561da2272c156ef7be5f3960953e4519c638759f1b52fe03ed52"
   license "LGPL-3.0"
 
   livecheck do
