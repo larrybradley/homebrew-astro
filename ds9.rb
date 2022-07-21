@@ -6,30 +6,27 @@ class Ds9 < Formula
 
   if MacOS.version == :big_sur
     stable do
-      url "https://ds9.si.edu/download/darwinbigsur/ds9.darwinbigsur.8.2.1.tar.gz"
-      sha256 "ecdbb042292f9f3183b61e0e49563043f51bafa323a921fd53cc22c28e1122ef"
-      version "8.2.1"
+      url "https://ds9.si.edu/download/darwinbigsur/ds9.darwinbigsurx86.8.3.tar.gz"
+      sha256 "81883d4c3dd5166f74ba47eca4892c6e58ec86a304863b8b01893c1d53f89ee2"
+      version "8.3"
     end
 
-  ## MacOS.version == :amd64_big_sur
-  ## url "https://ds9.si.edu/download/darwinbigsurarm64/ds9.darwinbigsurarm64.8.3b1.tar.gz"
+  elsif MacOS.version == :amd64_big_sur
+    stable do
+      url "https://ds9.si.edu/download/darwinbigsurarm64/ds9.darwinbigsurarm64.8.3.tar.gz"
+      sha256 "d43ce18267c6158c9fbe8fd6d01e44b8a015532870f2881ac221e28595d1232f"
+      version "8.3"
+    end
 
   elsif MacOS.version == :catalina
     stable do
-      url "https://ds9.si.edu/download/darwincatalina/ds9.darwincatalina.8.2.1.tar.gz"
-      sha256 "2646a147f76a500ad64d004d9023efb36f66cb72dd85fadb6f5622598d5024a4"
-      version "8.2.1"
-    end
-
-  elsif MacOS.version == :mojave
-    stable do
-      url "https://ds9.si.edu/download/darwinmojave/ds9.darwinmojave.8.2.1.tar.gz"
-      sha256 "e79331cb626f5fade6469c39a2b421762de74b355e466c5a7d0a408d6b758b03"
-      version "8.2.1"
+      url "https://ds9.si.edu/download/darwincatalina/ds9.darwincatalina.8.3.tar.gz"
+      sha256 "a43f770cf8f935ce9e1bd191c4b9ee177ad21d2aa6a0bddec904485a2a0dd0f6"
+      version "8.3"
     end
 
   else
-    onoe "ds9 - This formula is for OSX 10.14 (Mojave) or higher."
+    onoe "ds9 - This formula is for OSX 10.15 (Catalina) or higher."
   end
 
   def install
