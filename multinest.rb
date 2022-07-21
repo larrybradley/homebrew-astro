@@ -3,9 +3,8 @@ require "formula"
 class Multinest < Formula
   desc "A Bayesian inference tool that calculates the evidence and explores the parameter space which may contain multiple posterior modes and pronounced (curving) degeneracies in moderately high dimensions."
   homepage "https://github.com/JohannesBuchner/MultiNest"
-  url "https://github.com/JohannesBuchner/MultiNest/archive/v3.10.tar.gz"
-  version "3.10"
-  sha256 "8900588ddb4ece8ec09bb1cc4df80e3f02157b278176635d9ef9cdc1992559ce"
+  url "https://github.com/JohannesBuchner/MultiNest/archive/v3.10b.tar.gz"
+  sha256 "3ee341a063ef89bcbbdb9f4244f1469bc718814af30beaa1582617f7a36deada"
   head "https://github.com/JohannesBuchner/MultiNest"
 
   depends_on "cmake" => :build
