@@ -4,35 +4,33 @@ class Ds9 < Formula
   desc "Astronomical imaging and data visualization"
   homepage "https://sites.google.com/cfa.harvard.edu/saoimageds9/home"
 
+
   if MacOS.version == :monterey
     stable do
-      onoe "ds9 v8.3 is not available for monterey"
+      url "https://ds9.si.edu/download/darwinmontereyx86/ds9.darwinmontereyx86.8.4b1.tar.gz"
+      sha256 "64e47aabcaa14890dcdbcdf6bcbc16304b6dbcc7b11e73edd51b2f864f40c11b"
+      version "8.4b1"
     end
 
   elsif MacOS.version == :amd64_monterey
     stable do
-      onoe "ds9 v8.3 is not available for monterey AMD"
+      url "https://ds9.si.edu/download/darwinbigsurarm64/ds9.darwinbigsurarm64.8.4b1.tar.gz"
+      sha256 "e77000e6c181565d70414dedc539d75100a5b9a08f1119628ae2c26dd5084e7c"
+      version "8.4b1"
     end
 
   elsif MacOS.version == :big_sur
     stable do
-      url "https://ds9.si.edu/download/darwinbigsur/ds9.darwinbigsurx86.8.3.tar.gz"
-      sha256 "81883d4c3dd5166f74ba47eca4892c6e58ec86a304863b8b01893c1d53f89ee2"
-      version "8.3"
-    end
-
-  elsif MacOS.version == :amd64_big_sur
-    stable do
-      url "https://ds9.si.edu/download/darwinbigsurarm64/ds9.darwinbigsurarm64.8.3.tar.gz"
-      sha256 "d43ce18267c6158c9fbe8fd6d01e44b8a015532870f2881ac221e28595d1232f"
-      version "8.3"
+      url "https://ds9.si.edu/download/darwinbigsur/ds9.darwinbigsurx86.8.4b1.tar.gz"
+      sha256 "dd0e424276b97c8ad39803f73b9a000b61fc75f55fdb01b722858d0ad4ab7b62"
+      version "8.4b1"
     end
 
   elsif MacOS.version == :catalina
     stable do
-      url "https://ds9.si.edu/download/darwincatalina/ds9.darwincatalina.8.3.tar.gz"
-      sha256 "a43f770cf8f935ce9e1bd191c4b9ee177ad21d2aa6a0bddec904485a2a0dd0f6"
-      version "8.3"
+      url "https://ds9.si.edu/download/darwincatalina/ds9.darwincatalina.8.4b1.tar.gz"
+      sha256 "317b7a31f170f1cd9e26471ca4a6941c7961feb3c538a0bc2593c67e47661673"
+      version "8.4b1"
     end
 
   else
