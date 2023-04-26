@@ -1,40 +1,41 @@
 require "formula"
 
 class Ds9 < Formula
-  desc "Astronomical imaging and data visualization"
+  desc "Astronomical imaging and data visualization - X11 version"
   homepage "https://sites.google.com/cfa.harvard.edu/saoimageds9/home"
+  url "file:///dev/null"
+  # url "https://ds9.si.edu/download/source/ds9.8.4.1.tar.gz"
 
-
-  if MacOS.version == :monterey
+  if MacOS.version == :ventura
     stable do
-      url "https://ds9.si.edu/download/darwinmontereyx86/ds9.darwinmontereyx86.8.4b1.tar.gz"
-      sha256 "64e47aabcaa14890dcdbcdf6bcbc16304b6dbcc7b11e73edd51b2f864f40c11b"
-      version "8.4b1"
+      url "https://ds9.si.edu/download/darwinventurax86/ds9.darwinventurax86.8.4.1.tar.gz"
+      sha256 "87646d3b23804ebe5e2122ce2235832e5247226b6e69707f6ac31dbac91ed7b6"
+      version "8.4.1"
+    end
+
+  elsif MacOS.version == :amd64_ventura
+    stable do
+      url "https://ds9.si.edu/download/darwinventuraarm64/ds9.darwinventuraarm64.8.4.1.tar.gz"
+      sha256 "0c7d740f3ffbfc29f59bec8b804120dec3c68f0dab029f06bddd09df2527befc"
+      version "8.4.1"
+    end
+
+  elsif MacOS.version == :monterey
+    stable do
+      url "https://ds9.si.edu/download/darwinventurax86/ds9.darwinventurax86.8.4.1.tar.gz"
+      sha256 "e1e3827cf367c6c8416df4ae21f091d5412b9b33fce713ed041061dc6bfb6d02"
+      version "8.4.1"
     end
 
   elsif MacOS.version == :amd64_monterey
     stable do
-      url "https://ds9.si.edu/download/darwinbigsurarm64/ds9.darwinbigsurarm64.8.4b1.tar.gz"
-      sha256 "e77000e6c181565d70414dedc539d75100a5b9a08f1119628ae2c26dd5084e7c"
-      version "8.4b1"
-    end
-
-  elsif MacOS.version == :big_sur
-    stable do
-      url "https://ds9.si.edu/download/darwinbigsur/ds9.darwinbigsurx86.8.4b1.tar.gz"
-      sha256 "dd0e424276b97c8ad39803f73b9a000b61fc75f55fdb01b722858d0ad4ab7b62"
-      version "8.4b1"
-    end
-
-  elsif MacOS.version == :catalina
-    stable do
-      url "https://ds9.si.edu/download/darwincatalina/ds9.darwincatalina.8.4b1.tar.gz"
-      sha256 "317b7a31f170f1cd9e26471ca4a6941c7961feb3c538a0bc2593c67e47661673"
-      version "8.4b1"
+      url "https://ds9.si.edu/download/darwinmontereyarm64/ds9.darwinmontereyarm64.8.4.1.tar.gz"
+      sha256 "0c7d740f3ffbfc29f59bec8b804120dec3c68f0dab029f06bddd09df2527befc"
+      version "8.4.1"
     end
 
   else
-    onoe "ds9 - This formula is for OSX 10.15 (Catalina) or higher."
+    onoe "ds9 - This formula is for macOS Monterey or higher."
   end
 
   def install
