@@ -35,7 +35,7 @@ class Ds9 < Formula
     end
 
   else
-    onoe "ds9 - This formula is for macOS Monterey or higher."
+    onoe "ds9 - This formula is for macOS Ventura or higher."
   end
 
   def install
