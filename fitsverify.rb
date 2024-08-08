@@ -3,8 +3,8 @@ require "formula"
 class Fitsverify < Formula
   desc "Rigorously checks whether a FITS (Flexible Image Transport System) data file conforms to the FITS standard"
   homepage "https://heasarc.gsfc.nasa.gov/docs/software/ftools/fitsverify/"
-  url "https://heasarc.gsfc.nasa.gov/docs/software/ftools/fitsverify/fitsverify-4.20.tar.gz"
-  sha256 "eec2cdd1f1db12b6aea7e6e8af4a1166d3227d7a847160c2748318d8e6334885"
+  url "https://heasarc.gsfc.nasa.gov/docs/software/ftools/fitsverify/fitsverify-4.22.tar.gz"
+  sha256 "6c45e803a7e0edbcb7d13918615bae6361d2b333c292b849c509ec9bebdb18b4"
 
   depends_on "cfitsio" => :build
 
