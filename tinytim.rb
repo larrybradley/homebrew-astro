@@ -1,5 +1,3 @@
-require "formula"
-
 class Tinytim < Formula
   desc "PSF modeling tool for HST"
   homepage "https://www.stsci.edu/hst/instrumentation/focus-and-pointing/focus/tiny-tim-hst-psf-modeling"

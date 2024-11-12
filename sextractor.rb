@@ -1,5 +1,3 @@
-require "formula"
-
 class Sextractor < Formula
   desc "Source Extraction from astronomical images"
   # homepage "http://www.astromatic.net/software/sextractor"

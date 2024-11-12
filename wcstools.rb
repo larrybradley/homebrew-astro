@@ -1,5 +1,3 @@
-require "formula"
-
 class Wcstools < Formula
   desc "Tools for using World Coordinate Systems (WCS) in astronomical images"
   homepage "http://tdc-www.harvard.edu/wcstools/"

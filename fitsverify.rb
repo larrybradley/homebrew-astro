@@ -1,5 +1,3 @@
-require "formula"
-
 class Fitsverify < Formula
   desc "Rigorously checks whether a FITS (Flexible Image Transport System) data file conforms to the FITS standard"
   homepage "https://heasarc.gsfc.nasa.gov/docs/software/ftools/fitsverify/"

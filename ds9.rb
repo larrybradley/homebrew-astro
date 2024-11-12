@@ -1,5 +1,3 @@
-require "formula"
-
 class Ds9 < Formula
   desc "Astronomical imaging and data visualization - X11 version"
   homepage "https://sites.google.com/cfa.harvard.edu/saoimageds9/home"

@@ -1,5 +1,3 @@
-require "formula"
-
 class Lenstool < Formula
   desc "A gravitational lensing software for modeling mass distribution of galaxies and clusters (strong and weak regime)"
   homepage "https://projets.lam.fr/projects/lenstool/wiki"

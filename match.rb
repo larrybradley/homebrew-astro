@@ -1,5 +1,3 @@
-require "formula"
-
 class Match < Formula
   desc "Match items in two different lists"
   homepage "http://spiff.rit.edu/match/"

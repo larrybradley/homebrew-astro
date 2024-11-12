@@ -1,5 +1,3 @@
-require "formula"
-
 class Dophot < Formula
   desc "PSF-fitting photometry"
   homepage "https://github.com/M1TDoPHOT/DoPHOT_C"

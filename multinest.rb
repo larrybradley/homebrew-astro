@@ -1,5 +1,3 @@
-require "formula"
-
 class Multinest < Formula
   desc "A Bayesian inference tool that calculates the evidence and explores the parameter space which may contain multiple posterior modes and pronounced (curving) degeneracies in moderately high dimensions."
   homepage "https://github.com/JohannesBuchner/MultiNest"

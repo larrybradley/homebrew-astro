@@ -1,11 +1,9 @@
-require "formula"
-
 class Cosmic < Formula
   desc "Calculate cosmological distances and timescales"
   ## homepage "https://www.kempner.net/code.php#cosmic"
   homepage "https://github.com/joshkempner/Cosmic"
   url "https://github.com/joshkempner/Cosmic/archive/refs/heads/main.zip"
-  sha256 "60d22ea099d35c0cd4cc7afac7636c521b65700740573f53876e6c34763ac9e1"
+  sha256 "35c8722e740cceb3654db37f70c217eea9dbd9ebc001d3d2de106625543db0ab"
   version "2.1.5"
 
   # change default cosmology to (H, O_m, O_l) = (0.7, 0.3, 0.7)

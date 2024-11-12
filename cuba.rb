@@ -1,5 +1,3 @@
-require "formula"
-
 class Cuba < Formula
   desc "Library for multidimensional numerical integration"
   homepage "http://www.feynarts.de/cuba/"
