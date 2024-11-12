@@ -4,7 +4,7 @@ class Ds9 < Formula
   url "file:///dev/null"
   # url "https://ds9.si.edu/download/source/"
 
-  if MacOS.version == :sonoma
+  if MacOS.version == :sequoia || MacOS.version == :sonoma
     stable do
       url "https://ds9.si.edu/download/darwinsonomaarm64/ds9.darwinsonomaarm64.8.6.tar.gz"
       sha256 "aa994cdf49e220852f5483cf24e29147590c05a43bdefa14f2415bb249f623de"
