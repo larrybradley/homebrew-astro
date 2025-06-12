@@ -15,11 +15,24 @@ class Multinest < Formula
   patch :DATA
 
   def install
-    ENV.deparallelize
+    if !OS.mac? || Hardware::CPU.intel?
+      odie "This formula is only supported on macOS ARM (Apple Silicon)."
+    end
 
-    system "cmake", ".", *std_cmake_args, "-DCMAKE_INSTALL_PREFIX=#{prefix}", "-DCMAKE_{C,CXX}_FLAGS='-arch x86_64'", "-DCMAKE_Fortran_FLAGS='-m64'"
-    system "make"
-    system "make", "install"
+    ENV.deparallelize   # Prevent race conditions during Fortran build
+
+    mkdir "build" do
+      system "cmake", "..",
+                      "-DCMAKE_OSX_ARCHITECTURES=arm64",
+                      "-DCMAKE_Fortran_COMPILER=#{Formula["open-mpi"].opt_bin}/mpif90",
+                      "-DCMAKE_C_COMPILER=#{Formula["open-mpi"].opt_bin}/mpicc",
+                      "-DCMAKE_CXX_COMPILER=#{Formula["open-mpi"].opt_bin}/mpicxx",
+                      "-DCMAKE_INSTALL_PREFIX=#{prefix}",
+                      "-DCMAKE_POLICY_VERSION_MINIMUM=3.5",
+                      *std_cmake_args
+      system "make"
+      system "make", "install"
+    end
 
     doc.install("README")
     doc.install("LICENCE")
@@ -29,8 +42,6 @@ class Multinest < Formula
     <<~EOS
       Users are required to accept to the license agreement given in
       LICENCE file, found in #{doc}.
-
-      Examples are installed to #{HOMEBREW_PREFIX}/share/MultiNest.
     EOS
   end
 end
