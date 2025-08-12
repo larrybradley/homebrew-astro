@@ -1,7 +1,7 @@
 class Multinest < Formula
-  desc "A Bayesian inference tool that calculates the evidence and explores the parameter space which may contain multiple posterior modes and pronounced (curving) degeneracies in moderately high dimensions."
+  desc "Bayesian tool that calculates evidence and explores complex parameter spaces"
   homepage "https://github.com/JohannesBuchner/MultiNest"
-  url "https://github.com/JohannesBuchner/MultiNest/archive/v3.10b.tar.gz"
+  url "https://github.com/JohannesBuchner/MultiNest/archive/refs/tags/v3.10b.tar.gz"
   sha256 "3ee341a063ef89bcbbdb9f4244f1469bc718814af30beaa1582617f7a36deada"
   head "https://github.com/JohannesBuchner/MultiNest"
 
@@ -19,17 +19,18 @@ class Multinest < Formula
       odie "This formula is only supported on macOS ARM (Apple Silicon)."
     end
 
-    ENV.deparallelize   # Prevent race conditions during Fortran build
+    # Prevent race conditions during Fortran build
+    ENV.deparallelize
 
     mkdir "build" do
       system "cmake", "..",
-                      "-DCMAKE_OSX_ARCHITECTURES=arm64",
-                      "-DCMAKE_Fortran_COMPILER=#{Formula["open-mpi"].opt_bin}/mpif90",
-                      "-DCMAKE_C_COMPILER=#{Formula["open-mpi"].opt_bin}/mpicc",
-                      "-DCMAKE_CXX_COMPILER=#{Formula["open-mpi"].opt_bin}/mpicxx",
-                      "-DCMAKE_INSTALL_PREFIX=#{prefix}",
-                      "-DCMAKE_POLICY_VERSION_MINIMUM=3.5",
-                      *std_cmake_args
+             "-DCMAKE_OSX_ARCHITECTURES=arm64",
+             "-DCMAKE_Fortran_COMPILER=#{Formula["open-mpi"].opt_bin}/mpif90",
+             "-DCMAKE_C_COMPILER=#{Formula["open-mpi"].opt_bin}/mpicc",
+             "-DCMAKE_CXX_COMPILER=#{Formula["open-mpi"].opt_bin}/mpicxx",
+             "-DCMAKE_INSTALL_PREFIX=#{prefix}",
+             "-DCMAKE_POLICY_VERSION_MINIMUM=3.5",
+             *std_cmake_args
       system "make"
       system "make", "install"
     end

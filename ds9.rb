@@ -33,7 +33,7 @@ class Ds9 < Formula
     bin.install "ds9", "ds9.zip"
   end
 
-  def test
+  test do
     system "ds9"
   end
 end

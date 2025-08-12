@@ -3,14 +3,14 @@ class Cosmic < Formula
   ## homepage "https://www.kempner.net/code.php#cosmic"
   homepage "https://github.com/joshkempner/Cosmic"
   url "https://github.com/joshkempner/Cosmic/archive/refs/heads/main.zip"
-  sha256 "35c8722e740cceb3654db37f70c217eea9dbd9ebc001d3d2de106625543db0ab"
   version "2.1.5"
+  sha256 "35c8722e740cceb3654db37f70c217eea9dbd9ebc001d3d2de106625543db0ab"
 
   # change default cosmology to (H, O_m, O_l) = (0.7, 0.3, 0.7)
   patch :DATA
 
   def install
-    system "make all"
+    system "make", "all"
     bin.install "cosmic"
     prefix.install "README", "LICENSE"
   end
