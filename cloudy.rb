@@ -1,8 +1,8 @@
 class Cloudy < Formula
   desc "Spectral synthesis code for astrophysical simulations"
   homepage "https://gitlab.nublado.org/cloudy/cloudy/-/wikis/home"
-  url "https://data.nublado.org/cloudy_releases/c23/c23.01.tar.gz"
-  sha256 "a9ad2dc037e88f552389de0e483d68f54310976dee32154ed13830882aedae0b"
+  url "https://data.nublado.org/cloudy_releases/c25/c25.00.tar.gz"
+  sha256 "12a4fac7a29f888f56b37885df0067c92eae47a53c78060743e3c92140add5f3"
 
   def install
     # to change the number of make jobs, you can set the environment
@@ -34,9 +34,16 @@ class Cloudy < Formula
 
   def caveats
     <<~EOS
+      To change the number of make jobs, you can set the
+      HOMEBREW_MAKE_JOBS environment variable before installing this
+      package, e.g.:
+
+      $ export HOMEBREW_MAKE_JOBS=4
+
       You MUST set the environment variable CLOUDY_DATA_PATH to point to
       the data directory:
-      export CLOUDY_DATA_PATH=#{pkgshare}/data
+
+      $ export CLOUDY_DATA_PATH=#{pkgshare}/data
     EOS
   end
 end
