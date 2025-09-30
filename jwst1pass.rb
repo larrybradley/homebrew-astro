@@ -12,6 +12,6 @@ class Jwst1pass < Formula
   end
 
   test do
-    system "#{bin}/jwst1pass", "--help"
+    system "#{bin}/jwst1pass"
   end
 end

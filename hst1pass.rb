@@ -12,6 +12,6 @@ class Hst1pass < Formula
   end
 
   test do
-    system "#{bin}/hst1pass", "--help"
+    system "#{bin}/hst1pass"
   end
 end
